@@ -1,10 +1,10 @@
 # changeCode
 Set custom Safe/Lockbox/Door codes when placed and allow changing of codes
 
-* Discussion URL: 
+* Discussion URL: https://epochmod.com/forum/topic/45116-change-code-change-lockbox-safe-and-door-codes/
 
 * Tested as working on a blank Epoch 1.0.6.2 server
-* Set custom Safe/Lockbox/Door codes when placed and allow changing of codes
+* This will allow players to set the code on placement/upgrade of doors, lockboxes and safes as well as changing them after they are placed.
 
 # REPORTING ERRORS/PROBLEMS
 
