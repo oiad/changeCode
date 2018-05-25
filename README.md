@@ -18,7 +18,7 @@ Set custom Safe/Lockbox/Door codes when placed and allow changing of codes
 
 * This install basically assumes you have NO custom variables.sqf or compiles.sqf or fn_selfActions.sqf, I would recommend diffmerging where possible.
 
-**[>> Download <<](https://github.com/oiad/buryBodies/archive/master.zip)**
+**[>> Download <<](https://github.com/oiad/changeCode/archive/master.zip)**
 
 # Mission folder install:
 
