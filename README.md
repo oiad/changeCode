@@ -70,7 +70,7 @@ Set custom Safe/Lockbox/Door codes when placed and allow changing of codes
                         closeDialog 0;closeDialog 0;closeDialog 0;
                     };
                 };
-	```sqf
+	```
 
 # Battleye filters:
 
