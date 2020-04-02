@@ -54,6 +54,24 @@ Set custom Safe/Lockbox/Door codes when placed and allow changing of codes
 	call compile preprocessFileLineNumbers "\z\addons\dayz_server\compile\server_changeCode.sqf";
 	```
 
+# InfiSTAR install:
+
+1. In your <code>AH.sqf</code> remove this code block:
+	```sqf
+	                if(!isNull (findDisplay 41144))then
+                {
+                    _stateD = false;
+                    _stateV = false;
+                    if(isNil 'dayz_selectedDoor')then{_stateD = true;} else {if(isNull dayz_selectedDoor)then{_stateD = true;};};
+                    if(isNil 'dayz_selectedVault')then{_stateV = true;} else {if(isNull dayz_selectedVault)then{_stateV = true;};};
+                    if((_stateD) && (_stateV))then
+                    {
+                        (findDisplay 41144) closeDisplay 0;
+                        closeDialog 0;closeDialog 0;closeDialog 0;
+                    };
+                };
+	```sqf
+
 # Battleye filters:
 
 1. In your config\<yourServerName>\Battleye\publicVariable.txt around line 2 find the line starting with: <code>5 !=(remExField|remExFP)</code> add this to the end of the line:
