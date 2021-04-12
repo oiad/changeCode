@@ -16,8 +16,13 @@ _isSafe = _typeOf == "VaultStorage";
 _isLockBox = _typeOf == "LockBoxStorage";
 _isStorage = (_isSafe || _isLockBox);
 _isDoor = _typeOf in DZE_DoorsLocked;
-
 _badCode = false;
+_ownerID = _cursorTarget getVariable["ownerPUID","0"];
+
+if (_isStorage && {dayz_combination in ["0000","10000"]} && {_ownerID != dayz_playerUID}) exitWith {
+	dayz_actionInProgress = false;
+	localize "STR_CL_CC_CODE_DISALLOWED" call dayz_rollingMessages;
+};
 
 _dialog = switch (true) do {
 	case _isLockBox: {"KeyPadUI"};
@@ -97,7 +102,6 @@ if (_isStorage) then {
 	_object setVariable ["memDir",_dir,true];
 
 	if (DZE_permanentPlot) then {
-		_ownerID = _cursorTarget getVariable["ownerPUID","0"];
 		_object setVariable ["ownerPUID",_ownerID,true];
 		_doorFriends = _cursorTarget getVariable ["doorfriends",[]];
 		if (isNil "_ownerID" || _ownerID == "0") then {_ownerID = dayz_playerUID;};
