@@ -1,3 +1,5 @@
+# Outdated, already built into Epoch 1.0.7
+
 # changeCode
 Set custom Safe/Lockbox/Door codes when placed and allow changing of codes
 
